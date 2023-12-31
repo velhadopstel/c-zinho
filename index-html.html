@@ -1,0 +1,54 @@
+html
+<!DOCTYPE html>
+<html>
+<head>
+<title>C*zinho hoje?</title>
+<style>
+body {
+background-color: black;
+color: white;
+font-family: Arial, sans-serif;
+text-align: center;
+margin: 0;
+padding: 0;
+}
+h2 {
+font-size: 28px;
+}
+.container {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+button {
+background-color: white;
+color: blue;
+border-radius: 5px;
+padding: 10px 20px;
+font-size: 18px;
+margin: 10px;
+}
+#noButton {
+pointer-events: none;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h2>Cuzinho hoje?</h2>
+<button>Sim</button>
+<button id="noButton">Não</button>
+</div>
+<script>
+const noButton = document.getElementById('noButton');
+noButton.addEventListener('mouseover', () => {
+const randomX = Math.floor(Math.random() * window.innerWidth);
+const randomY = Math.floor(Math.random() * window.innerHeight);
+noButton.style.position = 'absolute';
+noButton.style.left = `${randomX}px`;
+noButton.style.top = `${randomY}px`;
+});
+</script>
+</body>
+</html>
